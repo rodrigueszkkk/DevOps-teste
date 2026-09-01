@@ -1,0 +1,45 @@
+{
+  "testes_api": [
+    {
+      "entidade": "AreaMonitorada",
+      "GET": {
+        "descricao": "Listar todas as áreas monitoradas",
+        "request": "GET /api/areas-monitoradas"
+      },
+      "POST": {
+        "descricao": "Criar uma nova área monitorada",
+        "request": "POST /api/areas-monitoradas",
+        "payload": {
+          "nome": "Floresta Amazônica Sul",
+          "cidade": "Manaus",
+          "uf": "AM",
+          "descricao": "Área de preservação com alto risco de desmatamento",
+          "coordenadas": {
+            "latitude": -3.119027,
+            "longitude": -60.021731
+          },
+          "nivelVulnerabilidade": "CRITICO"
+        }
+      },
+      "PUT": {
+        "descricao": "Atualizar uma área monitorada existente",
+        "request": "PUT /api/areas-monitoradas/1",
+        "payload": {
+          "nome": "Floresta Amazônica Sul Atualizada",
+          "cidade": "Manaus",
+          "uf": "AM",
+          "descricao": "Área de preservação com alto risco de desmatamento - Monitoramento Intensivo",
+          "coordenadas": {
+            "latitude": -3.119027,
+            "longitude": -60.021731
+          },
+          "nivelVulnerabilidade": "ALTO"
+        }
+      },
+      "DELETE": {
+        "descricao": "Deletar uma área monitorada",
+        "request": "DELETE /api/areas-monitoradas/1"
+      }
+    }
+  ]
+}
